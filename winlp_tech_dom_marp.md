@@ -3,6 +3,7 @@
 # Thinking about How NLP is Used to Serve Power: Current and Future Trends 
 
 Alvin Grissom II
+
 Ursinus College
 
 __
