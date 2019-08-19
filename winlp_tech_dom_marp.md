@@ -107,7 +107,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 * Algorithms learn *prejudice*, not merely "bias"
 * Caliskan et al. (2017) found "every linguistic bias documented in psychology [they] looked for" in gloVe embeddings.
  * Typical European-American names associated with pleasant words; black American names associated with negative words
- * Typical names for woman associated with arts; those for men associated with science
+ * Typical names for women associated with arts; those for men associated with science
  
 
 
@@ -394,7 +394,7 @@ Interview in MIT Technology Review, February 14, 2018
 ---
 # Recommended Reading
 
-- Race After Technology: Abolitionist Tools for the New Jim Code, by Reha Benjamin 
+- Race After Technology: Abolitionist Tools for the New Jim Code, by Ruha Benjamin 
 - Algorithms of Oppression: How Search Engines Reinforce Racism, by Safiya Noble 
 - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy, by Cathy O'neil
 - Automating Inequality: How High-tech Tools Profile, Police, and Punish the Poor, by Virginia Eubanks
