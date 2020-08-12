@@ -35,7 +35,7 @@ Jordan Boy-Graber (University of Maryland)
 - Well-documented adversarial attacks in computer vision (Goodfellow et al., 2014)
 
 
-<img align="right"  src="figures/panda_gibbon.png">
+<img align="right"  src="figures/panda_gibbon.PNG">
 
 <span style="font-size:75%">
  
@@ -48,7 +48,7 @@ Goodfellow, Ian J., Jonathon Shlens, and Christian Szegedy. "Explaining and harn
 ---
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
-<img align="center" height="420" src="figures/remove_unimportant_1.png">
+<img align="center" height="420" src="figures/remove_unimportant_1.PNG">
 
 <span style="font-size:50%">__
 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber "Pathologies of neural models make interpretations difficult." EMNLP (2018).
@@ -58,19 +58,19 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
-<img align="center" height="430" src="figures/remove_unimportant_2.png">
+<img align="center" height="430" src="figures/remove_unimportant_2.PNG">
 <span style="font-size:65%">__
   
 ---
 
-![3 pathological cases](pathologies/3pathological.png)
+![3 pathological cases](pathologies/3pathological.PNG)
 
 ---
 # All Examples Drastically Reduced
 - Run prediction on entire validation set.
 - Keep prediction the same.
 - We can consistently reduce examples to very short lengths without changing the prediction.
-<img align="center" src="pathologies/pathological_length.png">
+<img align="center" src="pathologies/pathological_length.PNG">
 
 ---
 
@@ -78,25 +78,25 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
  Confidence remains high on reduced examples.
 
 
- <img width=700 align="center" src="pathologies/confidence_high.png">
+ <img width=700 align="center" src="pathologies/confidence_high.PNG">
  
 ---
 
 # Humans Confused by Reduced Inputs
- <img width=700 align="center" src="pathologies/humans_confused.png">
+ <img width=700 align="center" src="pathologies/humans_confused.PNG">
 
 ---
 
 # How did this happen?
 
- <img  align="center" src="pathologies/already_rubbish.png">
+ <img  align="center" src="pathologies/already_rubbish.PNG">
 
 - After first reduction step, already rubbish, but confidence remains high.
 - Confidence is **not** the same as uncertainty.
 
 ---
 # How did this happen?
-<img  align="center" src="pathologies/bag_of_words_assumption.png">
+<img  align="center" src="pathologies/bag_of_words_assumption.PNG">
 
 - Implicit bag-of-words assumption.
 
@@ -106,23 +106,23 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 - Can this be mitigated?
    * Yes! Modify objective function to co-optimize for high entropy on reduced examples.
    * Ideally, we want a model to say "I don't know" when it doesn't know (uniform distribution of confidences)
-   <img align="center" src="figures/entropy_objective.png">
+   <img align="center" src="figures/entropy_objective.PNG">
 
 ---
-   <img align="center" src="pathologies/3better.png">
+   <img align="center" src="pathologies/3better.PNG">
 
 ---
-<img align="center" width="500" src="pathologies/accuracy_post_reg.png">
+<img align="center" width="500" src="pathologies/accuracy_post_reg.PNG">
 
 - Accuracy maintained with new model.
 
 ---
 
-<img align="center"  src="pathologies/accuracy_length_post_reg.png">
+<img align="center"  src="pathologies/accuracy_length_post_reg.PNG">
 
 ---
 
-<img align="center"  src="pathologies/reduced_more_meaningful.png">
+<img align="center"  src="pathologies/reduced_more_meaningful.PNG">
 
 - Input reduction leads to more meaningful examples after regularization.
 ---
