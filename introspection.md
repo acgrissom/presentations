@@ -35,7 +35,7 @@ Jordan Boy-Graber (University of Maryland)
 - Well-documented adversarial attacks in computer vision (Goodfellow et al., 2014)
 
 
-<img align="right"  src="figures/panda_gibbon.PNG">
+<img align="right"  src="figures/panda_gibbon.png">
 
 <span style="font-size:75%">
  
@@ -48,7 +48,7 @@ Goodfellow, Ian J., Jonathon Shlens, and Christian Szegedy. "Explaining and harn
 ---
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
-<img align="center" height="420" src="figures/remove_unimportant_1.PNG">
+<img align="center" height="420" src="figures/remove_unimportant_1.png">
 
 <span style="font-size:50%">__
 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber "Pathologies of neural models make interpretations difficult." EMNLP (2018).
@@ -58,7 +58,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
-<img align="center" height="430" src="figures/remove_unimportant_2.PNG">
+<img align="center" height="430" src="figures/remove_unimportant_2.png">
 <span style="font-size:65%">__
   
 ---
@@ -106,7 +106,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 - Can this be mitigated?
    * Yes! Modify objective function to co-optimize for high entropy on reduced examples.
    * Ideally, we want a model to say "I don't know" when it doesn't know (uniform distribution of confidences)
-   <img align="center" src="figures/entropy_objective.PNG">
+   <img align="center" src="figures/entropy_objective.png">
 
 ---
    <img align="center" src="pathologies/3better.PNG">
