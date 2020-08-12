@@ -199,9 +199,9 @@ Abram Handler*
     * All 5 workers agree on 93% of players.
     * Authors manually examined an additional 1,948 players from Google Image search.
 
-    ---
+---
 
-    # Dataset Analysis
+ # Dataset Analysis
 
     - We collect statistics on contextual terms in windows of five tokens around each player mention, following Ananya et al. (2019) for gender mention analysis.
     - Challenge: many sentences are descriptive, and descriptions can differ by position, which is skewed by race.
