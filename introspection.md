@@ -208,7 +208,9 @@ Abram Handler*
         * e.g., "Copper is a scrappy receiver", "passes the ball down the field"
 <img align="left" height="400" src="sports_bias/fig1.PNG"/>  
 <img align="left" height="400"  src="sports_bias/fig2.PNG"/>  
+
 ---
+
 # Naming and Sentiment Patterns
  - We sidestep confounds in our experiments on **naming patterns** and **sentiment patterns**.
  - **Naming patterns** are how sports commentators refer to players by name (e.g., first or last name).
@@ -218,6 +220,7 @@ Abram Handler*
 - **Sentiment patterns** examine positive or negative sentiment about a player.
 
 --- 
+
 # Naming Patterns
 <img align="left" width="500" src="sports_bias/table3.PNG"/>  We corroborate previous studies suggesting white players are more often referred to by last names for several positions.
 
