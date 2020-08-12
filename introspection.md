@@ -201,11 +201,11 @@ Abram Handler*
 
 ---
 
- # Dataset Analysis
+# Dataset Analysis
 
-    - We collect statistics on contextual terms in windows of five tokens around each player mention, following Ananya et al. (2019) for gender mention analysis.
-    - Challenge: many sentences are descriptive, and descriptions can differ by position, which is skewed by race.
-        * e.g., "Copper is a scrappy receiver", "passes the ball down the field"
+- We collect statistics on contextual terms in windows of five tokens around each player mention, following Ananya et al. (2019) for gender mention analysis.
+- Challenge: many sentences are descriptive, and descriptions can differ by position, which is skewed by race.
+    * e.g., "Copper is a scrappy receiver", "passes the ball down the field"
 <img align="left" height="400" src="sports_bias/fig1.PNG"/>  
 <img align="left" height="400"  src="sports_bias/fig2.PNG"/>  
 
