@@ -7,7 +7,7 @@ marp: true
 Jack Merullo*
  Luke Yeh*
 Abram Handler*
-**Alvin Grissom II+**
+Alvin Grissom II+
  Brendan O’Connor*
  Mohit Iyyer*
 
@@ -49,10 +49,10 @@ Abram Handler*
 
 # Data Processing
 - Download automatically captioned YouTube videos of games from archival channels (601 NFL games, 854 NCAA games).
-- Identify teams playing gmae and game's year by exact string matching in video title and manually labeling videos with underspecified titles.
-- Tokenize with spaCy.
-- Get part-of-speech tages with ARK TweetNLP (Owoputi et al., 2013).
--Use phrasemachine (Handler et al., 2016) to identify noun phrases.
+- Identify teams playing game and game's year by exact string matching in video title and manually labeling videos with underspecified titles.
+- Tokenize.
+- Get part-of-speech tags with ARK TweetNLP (Owoputi et al., 2013).
+- Use phrasemachine (Handler et al., 2016) to identify noun phrases.
 - Link exact string maches of first, last, and full names to roster information in online archives.
 
 ---
