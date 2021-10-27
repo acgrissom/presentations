@@ -22,12 +22,12 @@ I will introduce two projects that are "introspective."
 ---
 # Pathologies of Neural Models Make Interpretations Difficult
 
-Shi Feng (University of Marland)
+Shi Feng (University of Maryland)
 Eric Wallace (University of Maryland)
 **Alvin Grissom II (Haverford College)**
 Mohit Iyyer (University of Maryland)
 Pedro Rodriguez (University of Maryland)
-Jordan Boy-Graber (University of Maryland)
+Jordan Boyd-Graber (University of Maryland)
 
 ---
 
