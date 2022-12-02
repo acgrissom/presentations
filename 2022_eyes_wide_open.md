@@ -375,8 +375,9 @@ The Intercept. "Finding Your Voice", January 20, 2018
 - If GPT-3, etc. were sentient (which they aren't), then the obvious ethical avenue would be to stop all development on it.
     - Avoids bigger questions about what is motivating this particular direction.
 
----
 
+
+---
 # Mitigation?
 - Important, but often over-sold
 - Be weary of the wrong kind of "fixing"
@@ -402,6 +403,74 @@ __
 Herman, Edward S., and Noam Chomsky. Manufacturing consent: The political economy of the mass media. Random House, 2010.
 ---
 
+---
+# Beneficent Big Tech
+> [T]he "advances" in AI celebrated over the past decade were not due to fundamental scientific breakthroughs in AI techniques. They were and are primarily the product of significantly concentrated data and compute resources that reside in the hands of a few large tech corporations. Modern AI is fundamentally dependent on corporate resources and business practices, and our increasing reliance on such AI cedes inordinate power over our lives and institutions to a handful of tech firms. t also gives these firms significant influence over both the direction of AI development and the academic institutions wishing to research it
+
+Meridith Whittaker. "The steep cost of capture". *Insights* (2021)
+
+---
+# Beneficent Big Tech
+
+> Why would a conflicted government body populated by tech executives recommend "democratizing" access to the infrastructures at the heart of their concentrated power? Because this proposal wouldn't actually reduce that power. Indeed, if implemented, it would almost certainly entrench and expand large tech firms' power and reach. Big tech's domination over the infrastructure of AI research and development extends beyond providing "neutral platforms."
+
+Meridith Whittaker. "The steep cost of capture". *Insights* (2021)
+
+- Why would Amazon partner with NSF to sponsor research on "fairness?"
+
+---
+# Influence on Academia
+- Thought experiment (Abdalla and Abdalla, 2021).
+- Imagine every year there's a huge conference of academics to discuss the harms of tabacco and the proper ways of mitigating it.
+
+<sub>Mohamed Abdalla and Moustafa Abdalla. 2021. "The grey hoodie project: Big tobacco, big tech,
+and the threat on academic integrity." In Proceedings of the 2021 AAAI/ACM Conference on
+AI, Ethics, and Society.</sub>
+
+---
+# Influence on Academia
+- Thought experiment (Abdalla and Abdalla, 2021).
+- Imagine every year there was a huge conference every year to discuss the harms of tabacco and the proper ways of mitigating it.
+-  Now imagine that it was sponsored by Big Tabacco.
+
+<sub>Mohamed Abdalla and Moustafa Abdalla. 2021. "The grey hoodie project: Big tobacco, big tech,
+and the threat on academic integrity." In Proceedings of the 2021 AAAI/ACM Conference on
+AI, Ethics, and Society.</sub>
+
+---
+![h:495 invert](./2002_power_shift/abdalla_diagram.jpg)
+
+<sup><sub>Mohamed Abdalla and Moustafa Abdalla. 2021. "The grey hoodie project: Big tobacco, big tech, and the threat on academic integrity." Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society.</sub></sup>
+
+---
+# Alignment with Power Helps One's Career
+- More citations $\rightarrow$ more perceived credibility
+- More money $\rightarrow$ more perceived credibility
+- More perceived credibility $\rightarrow$ more coverage
+- More coverage $\rightarrow$ more influence
+- More influence $\rightarrow$ more power
+  - to shape future directions
+  - to draw attention to what one finds worthwhile
+
+---
+# Alignment with Power Helps One's Career
+- More citations $\rightarrow$ more perceived credibility
+- More money $\rightarrow$ more perceived credibility
+- More perceived credibility $\rightarrow$ more coverage
+- More coverage $\rightarrow$ more influence
+- More influence $\rightarrow$ more power
+  - to shape future directions
+  - to draw attention to what one finds worthwhile
+
+---
+![](./2002_power_shift/a_strange_game.jpg "Image from War Games")
+> A strange game.  The only winning move is not to play.
+  -War Games (1983)
+---
+# Imagine Something Better
+- Imagine virtual assistants that didn't rely on cloud storage of personal information.
+
+---
 # Final Thoughts
 
 > There is a bias to what kinds of problems we think are important, what kinds of research we think are important, and where we think AI should go. If we don’t have diversity in our set of researchers, we are not going to address problems that are faced by the majority of people in the world. When problems don’t affect us, we don’t think they’re that important, and we might not even know what these problems are, because we’re not interacting with the people who are experiencing them.
@@ -435,16 +504,16 @@ Interview in MIT Technology Review, February 14, 2018
 - We think of "naturally occurring data" as a natural resource.
 - If so, then our current relationship to data is **extractive**
   * What are the implications of this?
+- Value of research questions not solely determined by buisness applications!
   
 ---
 # My view
-- Small decisions matter.
+- Small everyday decisions matter.
 - Attacking people isn't going to solve this; systems are supra-individual.
 - It's an interesting challenge to work in a field with so much power and so many perverse incentives while striving for integrity.
 - Being informed doesn't have to mean being constantly angry.
-    - Really, it doesn't.
-    - I promise.
-
+- Constantly figure out your values and priorities, and live by those when interacting with the person next to you and deciding where you spend your energy and time.
+- Be wary of slogans and herds. Take a deep breath and decide whether it's worth it.
  
 
 ---
@@ -455,6 +524,7 @@ Interview in MIT Technology Review, February 14, 2018
 - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy, by Cathy O'neil
 - Automating Inequality: How High-tech Tools Profile, Police, and Punish the Poor, by Virginia Eubanks
 - Habeas Data: Privacy vs. the Rise of Surveillance Tech, by Cyrus Farivar
+- Emily Bender and Timnit Gebru , et al. *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?🦜.* Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency. 2021.
 
-
+---
 # Questions?
