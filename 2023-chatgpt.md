@@ -6,7 +6,7 @@ class:
 paginate: true
 footer: Alvin Grissom II\nHaverford College
 ---
-# Gentle Introduction to Computational Linguistics
+# ChatGPT
 ---
 # What is Computational Linguistics?
 - Can divide into overlapping areas
@@ -351,9 +351,55 @@ Train to do the following:
 - Trained on Common Crawl dataset
     - nearly one trillion words
 
+- Support 2,048 characters of prior context.
+
+
 ---
 # GPT-3
 ![invert](./2023-chatgpt/gpt3compute.jpg)
+
+---
+# ChatGPT
+
+- Based on GPT-3.5, but adds **reinforcement learning** with human feedback.
+    - Reinforcement learning is an area of machine learning that allows the algorithms to learn from experience.
+    - Uses a **reward (cost) function** to encourage or discourage certain actions.
+    - If the model does something good, reward it; if it does something bad, punish it.
+        - Model generalizes what "good" and "bad" responses are like.
+    - In ChatGPT, humans rank responses to queries.
+
+
+---
+# ChatGPT
+
+- GPT 3.5, fine-tuned on instruction-giving datasets.
+    - prior version caled InstructGPT.
+![](./2023-chatgpt/instruction-tuning.png)
+https://scale.com/blog/chatgpt-reinforcement-learning#Training%20on%20code
+
+---
+# ChatGPT
+
+- Based on GPT-3.5, but adds **reinforcement learning** with human feedback.
+    - Reinforcement learning is an area of machine learning that allows the algorithms to learn from experience.
+    - Uses a **reward (cost) function** to encourage or discourage certain actions.
+    - If the model does something good, reward it; if it does something bad, punish it.
+        - Model generalizes what "good" and "bad" responses are like.
+    - In ChatGPT, humans rank responses to queries.
+
+---
+# ChatGPT
+    - Uses reinforcement learning with human feedback (RLHF)
+    - So, ChatGPT learns from humans what humans want to see.
+        - Also used to try to de-rank toxic outputs.
+
+---
+# ChatGPT
+
+- Numerous ethical issues with these LLMS
+    - Did we consent to have our data used in this way?
+    - What happens if the Internet is flooded with non-human data?
+    - What are the consequences of people believing these things are alive?
 
 ---
 # Model Overconfidence
