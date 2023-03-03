@@ -96,7 +96,7 @@ Automatic Captioning
 - By using corpora, we can estiamte the probability of the next word in a sentence or phrase.
 - Ex: The word "science" is more likely to follow the word "computer" than "kumquat."
 - We can use this for autocompletion.
-    - In realty, modern autocompletion also uses other information, such as a profile of your recent behavior, location, etc. to inform suggestions.
+    - In reality, modern autocompletion also uses other information, such as a profile of your recent behavior, location, etc. to inform suggestions.
 ![h:350](./intro-compling/google_autocomplete.png)
 
 ---
@@ -351,7 +351,7 @@ Train to do the following:
 - Trained on Common Crawl dataset
     - nearly one trillion words
 
-- Support 2,048 characters of prior context.
+- Supports 2,048 characters of prior context.
 
 
 ---
@@ -368,6 +368,11 @@ Train to do the following:
         - Model generalizes what "good" and "bad" responses are like.
     - In ChatGPT, humans rank responses to queries.
 
+---
+# ChatGPT
+- In reinforcement learning, the **agent** takes an **action** (e.g., outputting a word or words).
+- Based on these actions, it receives a **reward** (or incurs a **cost**).
+![bg right 100% invert](2023-chatgpt/rl_cycle.svg)
 
 ---
 # ChatGPT
@@ -389,18 +394,24 @@ https://scale.com/blog/chatgpt-reinforcement-learning#Training%20on%20code
 
 ---
 # ChatGPT
-    - Uses reinforcement learning with human feedback (RLHF)
-    - So, ChatGPT learns from humans what humans want to see.
-        - Also used to try to de-rank toxic outputs.
+
+- Uses reinforcement learning with human feedback (RLHF)
+- So, ChatGPT learns from humans what humans want to see.
+    - Also used to try to de-rank toxic outputs.
 
 ---
 # ChatGPT
 
-- Numerous ethical issues with these LLMS
+- Numerous ethical issues with these LLMs
     - Did we consent to have our data used in this way?
     - What happens if the Internet is flooded with non-human data?
     - What are the consequences of people believing these things are alive?
 
+---
+# ChatGPT Problems
+    - Hallucinations
+    - Flooding Internet with spam
+    - Attribution
 ---
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
