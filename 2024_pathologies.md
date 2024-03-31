@@ -2,7 +2,7 @@
 marp: true
 theme: default
 class:
-#- invert
+-  
 paginate: true
 footer: Alvin Grissom II\nHaverford College
 ---
@@ -51,9 +51,6 @@ footer: Alvin Grissom II\nHaverford College
  - **Question answering**
  - Machine translation
 
----
-# Machine Translation
-![](./intro-compling/google_translate.png)
 
 ---
 # Model Overconfidence
@@ -88,7 +85,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 <sub><sup>
 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber "Pathologies of neural models make interpretations difficult." EMNLP (2018).
 </sub></sup>
-![invert bg right 100%](figures/loo.png)  
+![  bg right 100%](figures/loo.png)  
 
 
 ---
@@ -96,16 +93,16 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 # Input Reduction
 
 What if we removed **unimportant words** without changing predictions?
-![invert h:475](figures/remove_unimportant_1.png)
+![  h:475](figures/remove_unimportant_1.png)
 
 ---
 
 # Model Overconfidence
-![invert h:457](figures/remove_unimportant_2.png)
+![  h:457](figures/remove_unimportant_2.png)
 <span style="font-size:65%">__
   
 ---
-![bg  70% invert ](pathologies/3pathological_invert.PNG)
+![bg  70%   ](pathologies/3pathological_ .PNG)
 
 ---
 # All Examples Drastically Reduced
@@ -116,7 +113,7 @@ img[alt~="center"] {
 }
 </style>
 - We can consistently reduce examples to very short lengths without changing the prediction.
-![invert center h:450](pathologies/pathological_length.PNG)
+![  center h:450](pathologies/pathological_length.PNG)
 
 ---
 
@@ -124,25 +121,25 @@ img[alt~="center"] {
  Confidence remains high on reduced examples.
 
 
- ![bg right 100% invert](pathologies/confidence_high.PNG)
+ ![bg right 100%  ](pathologies/confidence_high.PNG)
  
 ---
 
 # Humans Confused by Reduced Inputs
 - Reduced inputs appear random to humans.
 
-![invert bg right 100%](pathologies/humans_confused.PNG)
+![  bg right 100%](pathologies/humans_confused.PNG)
 
 ---
 
 
- ![invert h:450](pathologies/already_rubbish.PNG)
+ ![  h:450](pathologies/already_rubbish.PNG)
 
 - After first reduction step, already rubbish, but confidence remains high.
 
 ---
 # How did this happen?
-![invert center h:450](pathologies/bag_of_words_assumption.PNG)
+![  center h:450](pathologies/bag_of_words_assumption.PNG)
 
 Impliict bag-of-words assumption.
 
@@ -161,20 +158,20 @@ Impliict bag-of-words assumption.
 
 
 ---
-   ![invert center h:650](pathologies/3better_invert.PNG)
+   ![  center h:650](pathologies/3better_ .PNG)
 
 ---
-![center invert](pathologies/accuracy_post_reg.PNG)
+![center  ](pathologies/accuracy_post_reg.PNG)
 
 - Accuracy maintained with new model.
 
 ---
 
-![center invert](pathologies/accuracy_length_post_reg.PNG)
+![center  ](pathologies/accuracy_length_post_reg.PNG)
 - Length of reduced examples increases, making them less likely to confuse humans.
 ---
 
-![center invert](pathologies/reduced_more_meaningful.PNG)
+![center  ](pathologies/reduced_more_meaningful.PNG)
 
 - Input reduction leads to more meaningful examples after regularization.
 ---
@@ -411,8 +408,91 @@ $$
 
 ---
 # Dissecting StyleGAN3
-- 
+- Distinct patterns distributions perceived race and hair length.
 ![bg right  100%](./2024_pathologies/hair_sex_density.png)
+
+---
+#### Dissecting StyleGAN3
+Bayesian linear regression on red, green, and blue's contribution
+###### Priors:
+Let $C=\{r,g,b\}$.
+![bg right 100%](./2024_pathologies/rgb_posteriors.png)
+$$
+\begin{aligned}
+    y &\sim \mathcal{N}(\mu_{\text{score}}, \sigma_{\text{score}}), \text{ where } \\
+    \mu_{\text{score}} &= \beta_0 + \beta_r x_r + \beta_g x_g + \beta_b x_b,  \\
+    \sigma_{\text{score}} &\sim \text{Half-}t(\sigma=1, \nu=10), \\
+    \sigma_{c} &\sim \text{Half-}t(\sigma=1, \nu=10), \forall c\in C,\\
+    \beta_0 &\sim \mathcal{N}(\mu=\bar{x}_{\text{score}},\sigma=\sigma_0), \\
+    \beta_r &\sim \mathcal{N}(\mu=0, \sigma=\sigma_r), \\
+    \beta_g &\sim \mathcal{N}(\mu=0, \sigma=\sigma_g), \\
+    \beta_b &\sim \mathcal{N}(\mu=0, \sigma=\sigma_b). 
+\end{aligned}
+$$
+
+---
+# Dissecting StyleGAN3
+- Is it just color?
+
+- Crowdsource labels based on perceived features of scraped faces.
+    * $C$ = {Afrocentricity, Asiocentricity, Eurocentricity, hair length, masculinity, femininity}.
+    * 1-7 scale
+    * Examine how much each contribute to distriminator score in a (Bayesian) linear regressiob.
+---
+# Dissecting StyleGAN3
+![bg right 100%](./2024_pathologies/orginal_posteriors.png)
+Priors:
+$$
+\begin{equation}
+    \begin{aligned}
+    y &\sim \mathcal{N}(\mu_{\text{score}}, \sigma_{\text{score}}), \text{ where } \\
+    \mu_{\text{score}} &= \beta_0 + \boldsymbol\beta^\top \mathbf{x},  \\
+      \sigma_{\text{score}} &\sim \text{Half-Cauchy}(\gamma=10), \\  
+     \sigma_{c} &\sim \text{Half-}t(\sigma=1, \nu=10),  \forall c\in C, \\
+     \mu_c &\sim \mathcal{N}(\mu=0, \sigma=\sigma_c), \forall c\in C \\
+    %\sigma_{\text{score}} &\sim \text{Half-Normal}(s_{\text{score}}), \\
+    \nu_\beta &\sim \text{Half-Cauchy}(\gamma=2), \\
+     \beta_{c} &\sim t(\nu=\nu_\beta, \mu=\mu_c, \sigma=\sigma_c), \forall c\in C.
+\end{aligned}
+\end{equation}
+$$
+
+---
+# Dissecting StyleGAN3
+![bg right 100%](./2024_pathologies/skin_red_grid.png)
+- Is it just color?
+    - Maybe not.
+    - Certain perceived races seem to be penalized more.
+        - Inconclusive.
+
+---
+
+# Dissecting StyleGAN3
+Is it just color? One more experiment.
+- Train two depth-limited decision trees (depth 5).
+    - Look at the splitting nodes.
+    - Reduces Gini impurity (related to entropy/information gain)
+        - how often would $x$ be misclassified if randomly labeled?
+- Only a few categories end up in the tree
+    - **root, depth 1:** red
+    - **depth 2:** red, blue, masculinity
+    - **depth 3:** red, blue, masculinity, Eurocentricity
+    - **depth 4:** red, blue, green, masculinity, Afrocentricity, skintone
+   
+---
+# StyleGAN3 Conclusions
+
+- Clearly a severe color bias 
+    - Sometimes highly pathological (e.g., red/pink preference)
+- But some evidence that other face/picture qualities are also penalized.
+- **Not** explainable from training data alone.
+- Future work: how well does this generalize between training runs and architectures?
+
+---
+# Overall Conclusions
+
+- Neural network complexity lends them to highly pathological behaviors.
+- Inscrutable, but we can at least characterize the problems.
 
 ---
 #### References 1
