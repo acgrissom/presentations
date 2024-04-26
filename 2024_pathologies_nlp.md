@@ -11,12 +11,9 @@ footer: Alvin Grissom II\nHaverford College
 ---
 # Outline
 - Self-introduction
-- Accessible Introduction to Natural Language Processing
-    - accessible to undergraduates
-- Computational verb prediction in subject-object-verb languages
-    - SOV-SVO Simultaneous machine translation
 - Pathological errors in NLP systems
-    - What do these say about what systems learn?
+-  Stress testing MT models with perturbations
+- (If there's time) Analogues in computer vision.
 ---
 
 
@@ -24,7 +21,7 @@ footer: Alvin Grissom II\nHaverford College
 # Self-Introduction
 - Associate Professor of Computer Science at Haverford College (near Philadelphia, Pennslvania, USA) 
     - Undergraduate liberal arts college
-    - Visiting Scholar, University of Tokyo Miyao Lab
+    - Visiting Scholar, University of Tokyo
 - Computational linguist
 - Ph.D. (2017) in Computer Science from University of Colroado Boulder with Jordan Boyd-Graber
 
@@ -69,8 +66,7 @@ footer: Alvin Grissom II\nHaverford College
 ### Highlighting Important Words
 - One common interpretation technique is to highlight **important words.**
 - Remove each word, one at a time, and observe the change in confidence.
-    - Slow
-   - We can approximate with input gradient (Simonyan et al., 2014)
+   - We can approximate this (Simonyan et al., 2014)
 
 <sub><sup>
 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber "Pathologies of neural models make interpretations difficult." EMNLP (2018).
@@ -78,9 +74,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 
 ---
 - One common interpretation technique is to highlight **important words.**
-- Remove each word, one at a time, and observe the chane in confidence.
-    - Slow
-   - We can approximate with input gradient (Simonyan et al., 2014)
+
 
 <sub><sup>
 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber "Pathologies of neural models make interpretations difficult." EMNLP (2018).
@@ -102,7 +96,7 @@ What if we removed **unimportant words** without changing predictions?
 <span style="font-size:65%">__
   
 ---
-![bg  70%   ](pathologies/3pathological_ .PNG)
+![bg 70%](pathologies/3pathological.PNG)
 
 ---
 # All Examples Drastically Reduced
@@ -127,6 +121,9 @@ img[alt~="center"] {
 
 # Humans Confused by Reduced Inputs
 - Reduced inputs appear random to humans.
+- On right: accuracy of humans vs. random inputs
+    - humans don't prefer reduced inputs over random inputs
+- Thus, models are miscallibrated.
 
 ![  bg right 100%](pathologies/humans_confused.PNG)
 
@@ -158,28 +155,27 @@ Impliict bag-of-words assumption.
 
 
 ---
-   ![  center h:650](pathologies/3better_ .PNG)
+![center h:650](pathologies/3better.PNG)
 
----
-![center  ](pathologies/accuracy_post_reg.PNG)
+ ---
+ <!--- ![center](pathologies/accuracy_post_reg.PNG) --->
+<!--- - Model accuracy maintained with new model. --->
+<!--- --->
 
-- Accuracy maintained with new model.
-
----
-
-![center  ](pathologies/accuracy_length_post_reg.PNG)
+<!-- ![center  ](pathologies/accuracy_length_post_reg.PNG)
 - Length of reduced examples increases, making them less likely to confuse humans.
 ---
 
 ![center  ](pathologies/reduced_more_meaningful.PNG)
 
 - Input reduction leads to more meaningful examples after regularization.
----
+--- -->
 
 # Summary
 - Neural models are overconfident, making interpretations difficult.
     * Poor uncertainty estimates from training.
     * Entropy regularization helps to mitigate.
+         - a bit of a hack
     
 ---
 
@@ -189,26 +185,6 @@ Impliict bag-of-words assumption.
     - "hallucinations" (Lee at al., 2018)
 
 <sup><sub>From The Guardian (2017).</sub></sup>
-
-
----
-
-# Other Examples of Pathological Behaviors
-![bg right 100%](./2022-mindcore/facebook-mistranslate.png)
-- Machine Translation
-    - "hallucinations" (Lee at al., 2018)
-
-<sup><sub>From The Guardian (2017).</sub></sup>
-
----
-
-# Other Examples of Pathological Behaviors
-![bg right 100%](figures/panda_gibbon.png)
-
-- Machine Translation
-    - "hallucinations" (Lee at al., 2018)
-- Question Answering (Feng et al. 2018)
-- Vision (Goodfellow et al., 2017)
 
 
 ---
@@ -241,11 +217,12 @@ Impliict bag-of-words assumption.
 
 ---
 # Examining Errors
+- Work with my student Ruikang Shi (now at Google)
 
 - Most NLP work is currently focused on increasing accuracy.
 
 - I'm more interested in the mistakes.
-
+![bg right 80%](./2024_pathologies/ruikang.jpeg)
 
 ---
 # Machine Translation
@@ -286,10 +263,126 @@ Mathing Translation Pathologies
 
 ---
 ![](./2024_pathologies/li_etall_2022_table.png)
-(Shi et al., 2022)
+<sub><sup>Shi, Ruikang, Alvin Grissom II, and Duc Minh Trinh. "Rare but Severe Neural Machine Translation Errors Induced by Minimal Deletion: An Empirical Study on Chinese and English." Proceedings of the 29th International Conference on Computational Linguistics. 2022.</sub></sup>
+
 
 ---
-### Computing: Dissecting a Face-generating Generative Adversarial Network
+# Work in progress: Perturbation Experiments
+- Work with my student Simon Babb (now at Amazon)
+- Word Order
+- Linguistically-motivated tokens
+![bg right 50%](./2024_pathologies/simon.jpeg)
+---
+# Word Order
+## Stress Testing NMT on Word Order
+
+- Question: How much does correct word order matter for NMT?
+    - Hypothesis: Not as much as we may think.
+- Experiment: Train two models
+    - one on shuffled source sentences
+    - one on normal source sentences
+
+---
+# Stress Testing on Word Order
+$$
+\tilde{e} = \underset{e}{\text{argmax }} p(f|e) p(e)
+$$
+- If model is very good at modeling $p(e)$, it could still work.
+---
+# Results
+![](./2024_pathologies/shuffled_bilingual_table.png)
+
+---
+# Results
+- En-Zh is more sensitive
+- En-Es is extremely robust
+    - Shuffled English-Spanish higher than some normal models!
+
+![bg right 100%](./2024_pathologies/shuffled_bilingual_table.png)
+
+---
+# Results
+- What if we incrementally shuffle at test time?
+
+---
+
+![h:550 center](./2024_pathologies/incremental_shuffle.png)
+<div style="text-align: right">(Babb and Grissom, 2024, in revision)</div>
+
+---
+# Experiment 2: Mononlingual Reconstruction
+- What if we do monolingual "translation"
+- E.g., shuffling English source and train model to reorder.
+- Removes word order information
+- Isolates difficulty of word order from difficulty of translation.
+
+---
+# Experiment 2 Results
+![h:500](./2024_pathologies/monolingual_reconstruction.png)
+<div style="text-align: right">(Babb and Grissom, 2024, in revision)</div>
+
+---
+![h:600 center](./2024_pathologies/shuff_unshuf_example.png)
+<div style="text-align: right">(Babb and Grissom, 2024, in revision)</div>
+
+---
+# Another Example: Case Markers in Japanese
+- Work with my student Bailey (Machiko) Hitora
+![bg right 80%](./2024_pathologies/bailey_hirota.jpeg)
+---
+# Case Marker Robustness
+- Case markers are instrumental in Japanese sentence processing for humans (Yamashita, 1997; Grissom II et al. 2016) and machines (Li et al. 2020).
+- On right: Li et al. 2020 examine case markers' role in incremental verb prediction.
+![bg right 100%](./2024_pathologies/li_et_all_case_plot.png)
+
+---
+# Case Marker Experiment:
+- Train two models:
+     - one with source case markers
+     - one without case markers
+     は　で　に　が　を　と
+- Test on sentences with and without case markers.
+
+---
+# Case Marker Experiment Results:
+![](./2024_pathologies/ja_case_results.png)
+
+---
+# Case Marker Experiment Results:
+![bg right 100%](./2024_pathologies/ja_case_results.png)
+- No much of a difference.
+    - Weird.
+- Model trained without them is more robust.
+    - Intuitive.
+
+---
+
+# Linguistically-motivated Perturbations:
+- Work-in-progress with with Seun Eisape (soon PhD student at UC Berkeley)
+![bg right 80%](./2024_pathologies/seun.jpeg)
+
+---
+# Linguistically-motivated Perturbations
+- Instead of deleting random characters, delete categories.
+- Hypothesis: Chinese (for example) will not be sensitive to tense.
+
+---
+
+![h:600](./2024_pathologies/facet_plot.svg)
+
+<div style="text-align: right">(Eisape and Grissom II, 2024, in prep)</div>
+
+---
+# Preliminary Conclusions
+- Models may rely on linguistic information if it's available
+    - But they don't seem to be in any meaningful way.
+- Transformers (as we know) are extremely powerful language modelers.
+    - Fluent output can appear correct and still be wrong.
+- Be careful about assigning linguistic meaning to fluent output in transformers.
+
+---
+
+### Computer Vision: Dissecting a Face-generating Generative Adversarial Network
 
 
 ---
