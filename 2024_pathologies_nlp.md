@@ -382,7 +382,11 @@ $$
 
 ---
 
-### Computer Vision: Dissecting a Face-generating Generative Adversarial Network
+#### Computer Vision: Dissecting a Face-generating Generative Adversarial Network
+Joint work with colleagues Ryan Lei (Haverford, Psychology), Jeová Farias Sales Rocha Neto (Bowdoin) and Haverford students Matt Gusdorff, Ryan Trotter, and Bailey Lin
+![h:250](./2024_pathologies/Ryan-Lei-2.jpg)![h:250](./2024_pathologies/jeova.png)
+![h:250 ](./2024_pathologies/matt_gusdorff.jpg)![h:250](./2024_pathologies/ryantrotter.jpg)![h:250](./2024_pathologies/yikanglin.jpg)
+
 
 
 ---
