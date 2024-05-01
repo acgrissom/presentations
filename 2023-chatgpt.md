@@ -6,7 +6,35 @@ class:
 paginate: true
 footer: Alvin Grissom II\nHaverford College
 ---
-# ChatGPT
+# Natural Language Processing and Large Language Models
+
+---
+# Outline
+- About me
+- Overview of computational linguistics and NLP
+- Statistical Language Modeling
+- Word Embeddings
+- Large Language Models
+- Chatbots
+- Ethical issues and risks
+
+---
+# About me
+
+- Assistant Professor of Computer Science at Haverford College
+- Work on computational linguistics, machine learning, and, lately, computer vision.
+    - Published papers on simultaneous machine translation, sentence-final verb prediction in Japanese and German, racial bias in sports commentary, pathological errors in deep learning NLP models, etc.
+- Lately interesting in the philosophy of probability
+
+
+---
+# Most recent published work (with students)
+![invert bg right 100%](./2023-chatgpt/rarebutsevere_table.jpg)
+
+*Rare but Severe Neural Machine Translation Errors Induced by Minimal Deletion: An Empirical Study on Chinese and English* 
+Ruikang Shi, Alvin Grissom II, and Duc Minh Trinh
+
+
 ---
 # What is Computational Linguistics?
 - Can divide into overlapping areas
@@ -380,7 +408,7 @@ Train to do the following:
 - GPT 3.5, fine-tuned on instruction-giving datasets.
     - prior version caled InstructGPT.
 ![](./2023-chatgpt/instruction-tuning.png)
-https://scale.com/blog/chatgpt-reinforcement-learning#Training%20on%20code
+ Image from Wei et al. (2022)
 
 ---
 # ChatGPT
@@ -400,18 +428,87 @@ https://scale.com/blog/chatgpt-reinforcement-learning#Training%20on%20code
     - Also used to try to de-rank toxic outputs.
 
 ---
-# ChatGPT
+# Emergence
+
+**Emergence** is an overloaded term.
+   - In philosophy, it has referred to properties of a system that supercede the sum of the system's parts.
+   - In LLMs, it has referred to their ability to, e.g., play games, write simple code, etc.
+
+---
+# Emergence
+
+**Emergence** is an overloaded term.
+   - In philosophy, it has referred to properties of a system that supercede the sum of the system's parts.
+   - In LLMs, it has referred to their ability to, e.g., play games, write simple code, etc.
+        - Can be tricky to verify.
+        - Is learning to play chess when there are a million games in its training data "emergence" or just training?
+
+---
+# Large Language Models
 
 - Numerous ethical issues with these LLMs
     - Did we consent to have our data used in this way?
     - What happens if the Internet is flooded with non-human data?
     - What are the consequences of people believing these things are alive?
+    - Energy costs
+![bg right 99% invert](./2023-chatgpt/parrots_lmdev.jpg)
+
 
 ---
-# ChatGPT Problems
-    - Hallucinations
-    - Flooding Internet with spam
-    - Attribution
+
+# More LLM Problems Problems
+- Hallucinations
+    
+- Flooding Internet with spam
+    
+- Attribution
+
+---
+![bg left 80%](./2023-chatgpt/chatgpt_banned.jpg)
+
+
+> ...because the average rate of getting correct answers from ChatGPT is too low, the posting of answers created by ChatGPT is substantially harmful to the site and to users who are asking and looking for correct answers.
+The primary problem is that while the answers which ChatGPT produces have a high rate of being incorrect, they typically look like they might be good and the answers are very easy to produce. 
+
+
+---
+# Stochastic Parrots
+Bender and Gebru et al. (2021) describe LLMs as "stochastic parrots."
+ - Argue that no language understanding takes place in LLMs
+    - contested by others
+- Argue that they solidify and reinforce biases in data
+
+---
+# Other issues
+- LLMs are designed for fluency.
+    - Fluency is not the same as accuracy.
+ ![bg right 99%](./2023-chatgpt/rl_firstperson.jpg)   
+    - Correct answer: Grissom et al. (2014)
+
+
+---
+# Other issues
+- LLMs are designed for fluency.
+    - Fluency is not the same as accuracy.
+ ![bg right 99%](./2023-chatgpt/alvingrissom_bs.jpg)   
+    - Most of this is false.
+- I do not work at UVA.
+- I have never been to Vanderbilt.
+- I do not have a CAREER award.
+
+---
+# Final thoguhts
+
+- Why are we doing this?
+- What does it mean for researchers to use a closed, commercial model?
+- Is this scientifically interesting?
+    - Will it still be interesting in five years?
+- Who benefits from this?
+- What does it say about a us, that we wish  to mechanize expression?
+---
+# Some of my prior work
+
+
 ---
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
@@ -425,7 +522,7 @@ Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan B
 
 # Model Overconfidence
 - What happens if we remove the *unimportant* words without changing the prediction? (Feng et al., 2018)
-![invert](figures/remove_unimportant_2.png)
+![invert center](figures/remove_unimportant_2.png)
 <span style="font-size:65%">__
   
 ---
@@ -449,7 +546,7 @@ img[alt~="center"] {
  Confidence remains high on reduced examples.
 
 
- ![invert](pathologies/confidence_high.PNG)
+ ![center invert height:640](pathologies/confidence_high.PNG)
  
 ---
 
@@ -458,7 +555,7 @@ img[alt~="center"] {
 
 ---
 
-# How did this happen?
+### How did this happen?
 
  ![invert center](pathologies/already_rubbish.PNG)
 
@@ -469,4 +566,4 @@ img[alt~="center"] {
 # How did this happen?
 ![invert center](pathologies/bag_of_words_assumption.PNG)
 
-- Implicit bag-of-words assumption.
+
