@@ -21,7 +21,6 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 
 ---
 # Outline
-
 - Introduction and Background
     - Primary contributions
     - Simultaneous Interpretation
@@ -31,7 +30,6 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
     - Survey Interpreters' Needs
     - Proxies as Surrogated for Professionals
     - Real-time Assistance UI
-    - Word Difficulty Metric
     - Evaluation
 - Conclusions
 
@@ -77,7 +75,7 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 
 ---
 # Experimental SI Task
-![bg right 100%](./2024_simint/speaking-bubbles.png)
+![bg right](./2024_simint/interpreters2.jpg)
 - Interpreters are in-demand, rare professionals
 - Automated metrics (e.g., BLEU) enabled rapid progress in machine translation
 - Untrained bilingual people are not perfect substitute for professionals
@@ -85,28 +83,29 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 
 ---
 # Experimental SI Task
-- Interpreters are trained to cope with cognitive load and multitasking compared to translators
+- Interpreters are trained to cope with cognitive load and multitasking vs. translators
 - Hypothesis: Bilingual **proxies** respond similarly to interpreters when working in conditions that address their comparable shortcomings
-- We present proxies with same challenges faced by professionals while preventing them from becoming overhwlemed.
+- We present proxies with same challenges faced by professionals while preventing them from being overwhelmed
+![bg right %](./2024_simint/interpreters2.jpg)
 
 ---
 # Experimental SI Task
-## Four Major SI Challenges (Giles, 2009)
+## Four Major SI Challenges (Gile, 2009)
 - listening while speaking (multitasking)
 - rapid translation (timing)
 - understanding the topic area of speech (content)
 - mantaining stamina (stamina)
-
+![bg right %](./2024_simint/interpreters2.jpg)
 ---
 # Experimental SI Task
-## Four Major SI Challenges (Giles, 2009)
+## Four Major SI Challenges (Gile, 2009)
 - Multitasking and timing are key for SI
     - Eliminating completely would invalidate our experiments
 - Concessions for multitasking:
     - progress bars
     - three-second delay
-- We focus on content
-    - conditions manipulate whether translations appear aove the sentence progress bar (immediately)
+- We focus on **content**
+    - conditions manipulate whether translations appear above the sentence progress bar (immediately)
 
 ---
 # Proxy SI Task
@@ -135,9 +134,11 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 
 ---
 # Dataset
-- Spanish Speeches: Audio from Creative Commons-license YouTube video from Mayo Clini, CDC, and FDA either recorded or human-captioned in Spanish and English.
+![bg right 70%](./2024_simint/video-player.svg)
+- Spanish Speeches: Audio from Creative Commons-license YouTube video from Mayo Clinic, CDC, and FDA either recorded or human-captioned in Spanish and English.
 - English speeches: four excerpted recordings of quarterly earnings calls from Alphabet, Blizzard, Costco, and United Healthcare
 - All speeches  approximately 5 minutes
+
 
 ---
 # Participants
@@ -155,14 +156,14 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 - Paid USD $25 for 20-minute session
 - Shown tutorial to introduce interace
 - Record three conditions, in random order, on three random speeches
-
+![bg right 50%](./2024_simint/helpdesk.svg)
 ---
 # Transcription
-- Translations transcribed by professional transcription serice
+- Translations transcribed by professional transcription service
 - Transcriptions scored against gold-standard translation with METEOR metric
     - preferred over BLEU for sentence-level quality assessment
     - preferable for interpretation
-
+![bg right 100%](./2024_simint/typing.svg)
 ---
 # Results and Analysis
 - Poxy METEOR scores (0.035-0.380) vary more than professionals' (0.140-0.227)
@@ -196,3 +197,12 @@ Craig Stewart<sup>3</sup>, C. Anton Rytting<sup>3</sup>, Leah Findlater<sup>4</s
 - Odd that interventions help more than **EXPERT HELP**
     - Perhaps signle annotator's judgments don't generalize
     - Higher rate of infrequent cognates in **EXPERT HELP** condition might make it less effective
+
+---
+# Conclusions
+- Generally consistant results for professionals and proxies
+- Potential for more user-focused development of aids for simultaneous translation
+- Faster human-in-the-loop testing at lower cost
+- Difficulty metric predicts downstream translation difficulty for non-professionals when used with gold-standard translations
+- Untrained bilingual surrogates can be used as surrogates in piloting phases of assistance designs
+- Limitation: inherent shortcomings of automatic metrics
