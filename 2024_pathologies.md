@@ -113,7 +113,7 @@ img[alt~="center"] {
 }
 </style>
 - We can consistently reduce examples to very short lengths without changing the prediction.
-![  center h:450](pathologies/pathological_length.PNG)
+![center h:450](pathologies/pathological_length.PNG)
 
 ---
 
@@ -121,19 +121,19 @@ img[alt~="center"] {
  Confidence remains high on reduced examples.
 
 
- ![bg right 100%  ](pathologies/confidence_high.PNG)
+ ![bg right 100% ](pathologies/confidence_high.PNG)
  
 ---
 
 # Humans Confused by Reduced Inputs
 - Reduced inputs appear random to humans.
 
-![  bg right 100%](pathologies/humans_confused.PNG)
+![bg right 100%](pathologies/humans_confused.PNG)
 
 ---
 
 
- ![  h:450](pathologies/already_rubbish.PNG)
+ ![h:450](pathologies/already_rubbish.PNG)
 
 - After first reduction step, already rubbish, but confidence remains high.
 
@@ -158,7 +158,8 @@ Impliict bag-of-words assumption.
 
 
 ---
-   ![  center h:650](pathologies/3better_ .PNG)
+
+![center h:650](pathologies/3better_ .PNG)
 
 ---
 ![center  ](pathologies/accuracy_post_reg.PNG)
@@ -479,6 +480,10 @@ Is it just color? One more experiment.
     - **depth 3:** red, blue, masculinity, Eurocentricity
     - **depth 4:** red, blue, green, masculinity, Afrocentricity, skintone
    
+---
+# Random Bias
+![](./pathologies/random_bias.png)
+
 ---
 # StyleGAN3 Conclusions
 
